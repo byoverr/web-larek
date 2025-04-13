@@ -1142,10 +1142,8 @@
     "@types/expect" "^1.20.4"
     "@types/node" "*"
 
-"@types/ws@^8.5.5":
-  version "8.18.0"
-  resolved "https://registry.npmjs.org/@types/ws/-/ws-8.18.0.tgz"
-  integrity sha512-8svvI3hMyvN0kKCJMvTJP/x6Y/EoQbepff882wL+Sn5QsXb3etnamgrJq4isrBxSJj5L2AuXcI0+bgkoAXGUJw==
+"@types/ws@^8.5.1":
+  version "8.5.4"
   dependencies:
     "@types/node" "*"
 
@@ -2437,10 +2435,8 @@ fs-minipass@^2.0.0, fs-minipass@^2.1.0:
   dependencies:
     minipass "^3.0.0"
 
-fs-monkey@^1.0.4:
-  version "1.0.6"
-  resolved "https://registry.npmjs.org/fs-monkey/-/fs-monkey-1.0.6.tgz"
-  integrity sha512-b1FMfwetIKymC0eioW7mTywihSQE4oLzQn1dB6rZB5fx/3NpNEdAWeCSMB+60/AeT0TCXsxzAlcYVEFCTAksWg==
+fs-monkey@^1.0.3:
+  version "1.0.3"
 
 fs.realpath@^1.0.0:
   version "1.0.0"
@@ -3117,11 +3113,9 @@ media-typer@0.3.0:
     vinyl-file "^3.0.0"
 
 memfs@^3.4.3:
-  version "3.5.3"
-  resolved "https://registry.npmjs.org/memfs/-/memfs-3.5.3.tgz"
-  integrity sha512-UERzLsxzllchadvbPs5aolHh65ISpKpM+ccLbOJ8/vvpBKmAWf+la7dXFy7Mr0ySHbdHrFv5kGFCUHHe6GFEmw==
+  version "3.5.1"
   dependencies:
-    fs-monkey "^1.0.4"
+    fs-monkey "^1.0.3"
 
 merge-descriptors@1.0.1:
   version "1.0.1"
@@ -4570,10 +4564,8 @@ webpack-cli@^5.0.2, webpack-cli@5.x.x:
     rechoir "^0.8.0"
     webpack-merge "^5.7.3"
 
-webpack-dev-middleware@^5.3.4:
-  version "5.3.4"
-  resolved "https://registry.npmjs.org/webpack-dev-middleware/-/webpack-dev-middleware-5.3.4.tgz"
-  integrity sha512-BVdTqhhs+0IfoeAf7EoH5WE+exCmqGerHfDM0IL096Px60Tq2Mn9MAbnaGUe6HiMa41KMCYF19gyzZmBcq/o4Q==
+webpack-dev-middleware@^5.3.1:
+  version "5.3.3"
   dependencies:
     colorette "^2.0.10"
     memfs "^3.4.3"
@@ -4581,10 +4573,8 @@ webpack-dev-middleware@^5.3.4:
     range-parser "^1.2.1"
     schema-utils "^4.0.0"
 
-webpack-dev-server@^4.15.2:
-  version "4.15.2"
-  resolved "https://registry.npmjs.org/webpack-dev-server/-/webpack-dev-server-4.15.2.tgz"
-  integrity sha512-0XavAZbNJ5sDrCbkpWL8mia0o5WPOd2YGtxrEiZkBK9FjLppIUK2TgxK6qGD2P3hUXTJNNPVibrerKcx5WkR1g==
+webpack-dev-server@^4.13.3:
+  version "4.13.3"
   dependencies:
     "@types/bonjour" "^3.5.9"
     "@types/connect-history-api-fallback" "^1.3.5"
@@ -4592,7 +4582,7 @@ webpack-dev-server@^4.15.2:
     "@types/serve-index" "^1.9.1"
     "@types/serve-static" "^1.13.10"
     "@types/sockjs" "^0.3.33"
-    "@types/ws" "^8.5.5"
+    "@types/ws" "^8.5.1"
     ansi-html-community "^0.0.8"
     bonjour-service "^1.0.11"
     chokidar "^3.5.3"
@@ -4614,7 +4604,7 @@ webpack-dev-server@^4.15.2:
     serve-index "^1.9.1"
     sockjs "^0.3.24"
     spdy "^4.0.2"
-    webpack-dev-middleware "^5.3.4"
+    webpack-dev-middleware "^5.3.1"
     ws "^8.13.0"
 
 webpack-merge@^5.7.3:

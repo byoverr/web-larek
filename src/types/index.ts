@@ -1,92 +1,47 @@
-// Слой модели
-
-// Модель продукта
-export interface IProduct {
-	id: string
-	description: string
-	image: string
-	title: string
-	category: string
-	price: number
+export interface ICard {
+    id: string;
+    title: string;
+    description: string;
+    image: string;
+    category: string;
+    price: number;
 }
 
-// Модель информации о пользователе заказа
-export interface IUserInfo {
-	payment: PaymentType
-	email: string
-	phone: string
-	address: string
-}
-
-// Модель информации о содержимом заказа
 export interface IOrderInfo {
-	total: number
-	items: string[]
+    address: string;
+    payment: string;
 }
 
-// Модель успешного заказа с API
-export type SuccessOrder = {
-	id: string,
-	total: number
+export interface IContacts {
+    email: string;
+    phone: string;
 }
 
-// Модель заказа
-type Order = IUserInfo | IOrderInfo;
+export interface IOrder extends IOrderInfo, IContacts {}
 
-// Модель типа платежа
-export type PaymentType = 'online' | 'cash';
-
-// Сервис по работе с заказами
-export interface IOrderService {
-	processPayment(order: Order): void
+export interface OrderResult {
+    id: string;
+    total: number;
 }
 
-// Сервис по работе с корзиной
-export interface IBasket {
-	getItems(): string[]
-	add(id: string): void
-	remove(id: string): void
-	clear(): void
-	getTotalSum(): number
+export enum Payment {
+    card = 'card',
+    cash = 'cash',
 }
 
-
-
-// Слой Presentation (типы находятся в файле events.ts)
-
-
-// Слой View
-
-// Базовый интерфейс для любой view
-export interface IView<T> {
-	render(data?: T): HTMLElement
+export enum Message {
+    phone = 'Укажите номер телефона',
+    email = 'Укажите почту',
+    payment = 'Укажите способ оплаты',
+    address = 'Укажите адрес доставки',
+    form = 'Заполните поля',
+    no = '',
 }
 
-// Базовый интерфейс модального окна
-export interface IModal<T> extends IView<T> {
-	open(): void
-	close(): void
+export enum ButtonLabels {
+    isAvailable = 'В корзину',
+    inBasket = 'Убрать из корзины',
+    isUnvailable = 'Недоступно'
 }
 
-// View для отображения списка продуктов
-export interface IProductListView extends IView<IProduct[]> {
-	openProduct(id: string): void
-}
-
-// Модальное окно для отображения одного продукта
-export interface IProductModalView extends IModal<IProduct> {
-	addProductToBasket(id: string): void
-}
-
-// Модальное окно для оформления заказа для отображения формы заказа, пока undefined, наверное неверно
-export interface IOrderForm extends IModal<undefined> {
-	processOrder(): void;
-}
-
-
-// Модальное окно для отображения корзины
-export interface IBasketView extends IModal<string[]> {
-	startToProcessOrder(): void
-	deleteItem(id: string): void
-}
-
+export type FormErrors = Partial<Record<keyof IOrderInfo | keyof IContacts, string>>;
